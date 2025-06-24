@@ -1,1 +1,109 @@
 
+#include<iostream>
+using namespace std;
+int sss=0;
+int skin(int);
+int skinless(int);
+int chicken(int tch)
+ {
+    int sk=0,skless=0;
+    sk=tch;
+    skless=tch+10;
+    int c;
+    cin>>c;
+    switch(c)
+    {
+        case 1:skin(sk);
+               break;
+        case 2:skinless(skless);
+               break;
+        default:cout<<"INVALID OPTION";    
+        
+    }
+
+  }
+float rateofskin(float &skkg,float &s)
+{
+     
+    float slee,amtt;
+    slee=s/1000;
+   // cout<<slee<<"\n";
+    amtt=slee*skkg;
+     cout<<"      "<<"  AMOUNT="<<amtt;
+}
+float rateofskinless(float &sklekg,float &l)
+{
+
+    float amt,sle;
+    sle=(l)/1000;
+    amt=sle*sklekg;
+    cout<<"      "<<"  AMOUNT="<<amt;
+}
+
+
+int main()
+{
+    cout<<"\n**************************";
+    cout<<"\nCHOOSE 1 FOR SKIN  CHICK";
+    cout<<"\nCHOOSE 2 FPR SKIN LESS CHICK";
+    cout<<"\n***************************";
+
+    int tch;
+    cout<<"\nENTER TODAYS CHICKEN RATE::";
+    cin>>tch;
+    for(;;)
+    {
+      chicken(tch);
+      //s++;
+    }
+}
+int skin(int sk)
+{
+    float skkg,s ;
+    s=sk;
+    cout<<"ENTER NUMBER OF GRAMS::";
+    cin>>skkg;
+    cout<<"***************************************\n";
+    cout<<"   "<<"WELCOME TO CC CHICKEN SHOP\n";
+    cout<<"   "<<"VIJAYAWADA-521225\n";
+    cout<<"   "<<"PHONE:9618437481\n";
+    cout<<"   "<<"SERVICE TAX NO::AAFFN6413R5D0001\n";
+     cout<<"***************************************\n";
+    cout<<"------------------------------------------\n";
+    cout<<"   "<<"DATE: 20-8-2023"<<"   "<<"TIME: 23.06\n";
+    cout<<"    "<<"BILL: A005643  "<<"   "<<"USER: A"<<sss++<<"\n";
+    cout<<"------------------------------------------\n";
+cout<<"***************************************\n";
+    rateofskin(skkg,s);
+     cout<<"\n";
+ cout<<"    "<<"Thank you \n "<< "     "<< "VISIT AGAIN\n";
+
+  // cout<<"AMOUNT="<<w<<"\n";
+    cout<<"***************************************\n";
+
+}
+int skinless(int skless)
+{
+         float sklekg,q;
+         float l=skless;
+    cout<<"\nENTER NUMBER OF GRAMS::";
+    cin>>sklekg;
+cout<<"***************************************\n";
+    cout<<"   "<<"WELCOME TO CC CHICKEN SHOP\n";
+    cout<<"   "<<"VIJAYAWADA-521225\n";
+    cout<<"   "<<"PHONE:9618437481\n";
+    cout<<"   "<<"SERVICE TAX NO::AAFFN6413R5D0001\n";
+     cout<<"***************************************\n";
+    cout<<"------------------------------------------\n";
+    cout<<"   "<<"DATE: 20-8-2023"<<"   "<<"TIME: 23.06\n";
+    cout<<"    "<<"BILL: A005643  "<<"   "<<"USER: A"<<sss++<<"\n";
+    cout<<"------------------------------------------\n";
+cout<<"***************************************\n";
+ rateofskinless(sklekg,l);
+ cout<<"\n";
+  cout<<"    "<<"Thank you \n "<< "     "<< "VISIT AGAIN\n";
+//cout<<"AMOUNT"<<q<<"\n";
+cout<<"***************************************\n";
+
+    
+}
