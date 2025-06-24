@@ -5,8 +5,8 @@ static int n = 2;
 static string p1, p2;
 char square[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}; 
 
-int board();
-int playboard(int);
+void board();
+void playboard(int);
 int main() {
     int choice;
     char a, b;
@@ -36,7 +36,8 @@ int main() {
     }
 }
 
-int board() {
+void board() 
+{
     cout << "*********************************************\n";
     cout << "\t" << square[1] << " |   " << square[2] << " |   " << square[3] << endl;
     cout << "\t" << "  |   " << "  |\n";
@@ -49,7 +50,7 @@ int board() {
     cout << "*********************************************\n";
 }
 
-int playboard(int k)
+void playboard(int k)
 {
     char symbol;
     if (n % 2 == 0) 
@@ -60,7 +61,13 @@ int playboard(int k)
         symbol = 'S';
         
     }
-    
+
+    if (square[k] == 'X' || square[k] == 'S') {
+        cout << "\nPosition already taken. Try again.\n";
+        n--; // repeat the same player's turn
+        return;
+    }
+
     square[k] = symbol;
     win();
     
@@ -129,7 +136,7 @@ void win()
          exit(0);
      }
      
-     else  if(square[3]==square[5] && square[5]==square[9])
+     else  if(square[3]==square[5] && square[5]==square[7])
      {
          cout<<"\t\t\n\n";
          cout<<w1<<"  WON THE GAME\n";
@@ -140,7 +147,4 @@ void win()
      {
         cout<<"\n\tGAME IS ON GUYS\n";
      }
-     int i;
-      cout<<i<<endl;
-      i++;
 }
